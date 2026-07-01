@@ -1,0 +1,39 @@
+# Dependências e builds padrão do Node/Vite
+node_modules/
+dist/
+dist-ssr/
+*.local
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.tsbuildinfo
+
+# Artefatos do Antigravity, Documentos e Pastas de Briefing
+.agents/
+.extract-design-system/
+agents/
+briefing/
+contrato/
+design-system/
+docs_startmedia/
+fluxos/
+manual/
+pagamento/
+proposta/
+skills/
+stitch/
+stitch_downloads/
+
+# Arquivos avulsos na raiz (planilhas, imagens de briefing, manuais em markdown)
+*.xlsx
+*.jpeg
+*.avif
+skills-lock.json
+manual_matheus.md
+referencia_manual_startmedia.md
+template.css
+# Ignorando SVG na raiz (normalmente assets deveriam estar em public/ ou src/assets/)
+/logo_maite.svg

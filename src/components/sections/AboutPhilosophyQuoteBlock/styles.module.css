@@ -1,0 +1,98 @@
+.philosophy-section {
+  width: 100%;
+  background-color: var(--color-on-tertiary-fixed); /* Maps to dark purple #340140 */
+  padding: var(--spacing-section-padding-desktop) var(--spacing-margin-mobile);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+}
+
+@media (max-width: 768px) {
+  .philosophy-section {
+    padding: var(--spacing-section-padding-mobile) var(--spacing-margin-mobile);
+    min-height: 60vh;
+  }
+}
+
+.container {
+  max-width: var(--spacing-container-max);
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+/* The Main Typographic Manifesto */
+.manifesto-quote {
+  font-family: var(--font-family-headline);
+  font-weight: 900;
+  font-size: clamp(3rem, 10vw, 8rem);
+  line-height: 0.95;
+  color: var(--color-support-beige);
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  margin-bottom: calc(var(--spacing-unit) * 6);
+  position: relative;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.manifesto-quote:hover {
+  transform: scale(1.02);
+}
+
+.citation {
+  font-family: var(--font-family-body);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 500;
+  color: var(--color-support-beige);
+  opacity: 0.8;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-top: 2rem;
+  font-style: normal;
+}
+
+/* Decorative Marks for Depth */
+.decoration-mark {
+  position: absolute;
+  font-family: var(--font-family-headline);
+  font-weight: 900;
+  font-size: 40rem;
+  line-height: 1;
+  color: var(--color-primary);
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 2;
+  user-select: none;
+}
+
+.mark-left {
+  top: -10rem;
+  left: -5rem;
+}
+
+.mark-right {
+  bottom: -15rem;
+  right: -5rem;
+  transform: rotate(180deg);
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 1; /* For React without Intersection Observer logic initially */
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

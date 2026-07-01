@@ -1,0 +1,200 @@
+.approach-section {
+  padding: var(--spacing-section-padding-mobile) var(--spacing-margin-mobile);
+  max-width: var(--spacing-container-max);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .approach-section {
+    padding: var(--spacing-section-padding-desktop) var(--spacing-gutter);
+    flex-direction: row;
+  }
+}
+
+.visual-side {
+  width: 100%;
+  border-radius: var(--border-radius-xl);
+  position: relative;
+  box-shadow: 0 20px 40px rgba(13, 20, 26, 0.08);
+}
+
+@media (min-width: 768px) {
+  .visual-side {
+    width: 50%;
+  }
+}
+
+.approach-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 4/5;
+  border-radius: inherit;
+}
+
+/* Decorative Accents */
+.accent-bottom {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  width: 8rem;
+  height: 8rem;
+  background-color: var(--color-support-beige);
+  border-radius: var(--border-radius-full);
+  z-index: -10;
+  filter: blur(24px);
+  opacity: 0.7;
+}
+
+.accent-top {
+  position: absolute;
+  top: 25%;
+  left: -2rem;
+  width: 6rem;
+  height: 6rem;
+  background-color: var(--color-primary-container);
+  border-radius: var(--border-radius-full);
+  z-index: -10;
+  filter: blur(24px);
+  opacity: 0.5;
+}
+
+/* Content Side */
+.content-side {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .content-side {
+    width: 50%;
+  }
+}
+
+.label-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.label-line {
+  width: 2rem;
+  height: 4px;
+  background-color: var(--color-primary-container);
+  border-radius: var(--border-radius-full);
+}
+
+.label-text {
+  font-family: var(--font-family-label-lg);
+  font-size: var(--font-size-label-lg);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.title {
+  font-family: var(--font-family-headline);
+  font-size: var(--font-size-headline-xl-mobile);
+  line-height: var(--line-height-headline-xl-mobile);
+  font-weight: var(--font-weight-headline-xl-mobile);
+  color: var(--color-impact-blue);
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--font-size-headline-xl);
+    line-height: var(--line-height-headline-xl);
+    font-weight: var(--font-weight-headline-xl);
+  }
+}
+
+.description {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-lg);
+  line-height: var(--line-height-body-lg);
+  color: var(--color-text-support);
+  margin-bottom: 2.5rem;
+  max-width: 36rem;
+}
+
+/* Steps Grid */
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.step-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background-color: var(--color-surface-light);
+  border-radius: var(--border-radius-xl);
+  border: 1px solid rgba(190, 201, 199, 0.2); /* outline-variant/20 */
+  transition: box-shadow 0.3s;
+}
+
+.step-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.icon-wrapper {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(132, 200, 195, 0.2); /* primary-container/20 */
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.step-title {
+  font-family: var(--font-family-headline);
+  font-size: 1.25rem; /* text-xl */
+  color: var(--color-on-surface);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.step-description {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  color: var(--color-text-support);
+}
+
+/* CTA Button */
+.cta-button {
+  background-color: #6A526F;
+  color: var(--color-on-primary);
+  font-family: var(--font-family-label-lg);
+  font-size: var(--font-size-label-lg);
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius-full);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #553f5b;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+}
